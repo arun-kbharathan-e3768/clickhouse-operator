@@ -1,17 +1,17 @@
-{
-    "editor.bracketPairColorization.enabled": true,
-    "workbench.colorCustomizations": {
-        "editorCursor.foreground": "#ff0000",
-        "editorBracketHighlight.foreground1": "#FF0000",
-        "editorBracketHighlight.foreground2": "#00FF00",
-        "editorBracketHighlight.foreground3": "#0000FF",
-        "editorBracketHighlight.foreground4": "#FF00FF",
-        "editorBracketHighlight.foreground5": "#00FFFF",
-        "editorBracketHighlight.foreground6": "#FFFF00"
-    },
-    "editor.cursorStyle": "block",
-    "editor.cursorSurroundingLines": 2,
-    "editor.cursorWidth": 1,
-    "editor.cursorSmoothCaretAnimation": "on",
-    "editor.cursorBlinking": "blink"
-}
+// {
+//     "editor.bracketPairColorization.enabled": true,
+//     "workbench.colorCustomizations": {
+//         "editorCursor.foreground": "#ff0000",
+//         "editorBracketHighlight.foreground1": "#FF0000",
+//         "editorBracketHighlight.foreground2": "#00FF00",
+//         "editorBracketHighlight.foreground3": "#0000FF",
+//         "editorBracketHighlight.foreground4": "#FF00FF",
+//         "editorBracketHighlight.foreground5": "#00FFFF",
+//         "editorBracketHighlight.foreground6": "#FFFF00"
+//     },
+//     "editor.cursorStyle": "block",
+//     "editor.cursorSurroundingLines": 2,
+//     "editor.cursorWidth": 1,
+//     "editor.cursorSmoothCaretAnimation": "on",
+//     "editor.cursorBlinking": "blink"
+// }

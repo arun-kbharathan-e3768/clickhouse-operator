@@ -5,22 +5,6 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Launch Operator Main with Kubernetes",
-            "type": "go",
-            "request": "launch",
-            "mode": "debug",
-            "program": "${workspaceFolder}/cmd/operator/main.go",
-            "args": [
-                "--debug",
-                "--config",
-                "/Users/arbharathan/go/src/github/clickhouse-operator/config/config-dev.yaml"
-            ],
-            "env": {
-                "KUBECONFIG": "/Users/arbharathan/.kube/config"
-            },
-            "preLaunchTask": "bridge-to-kubernetes.resource"
-        },
-        {
             "name": "Launch Operator Main",
             "type": "go",
             "request": "launch",

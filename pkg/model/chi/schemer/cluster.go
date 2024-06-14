@@ -139,6 +139,9 @@ func (c *Cluster) ExecHost(ctx context.Context, host *api.ChiHost, SQLs []string
 func (c *Cluster) QueryHost(ctx context.Context, host *api.ChiHost, sql string, _opts ...*clickhouse.QueryOptions) (*clickhouse.QueryResult, error) {
 	hosts := model.CreateFQDNs(host, api.ChiHost{}, false)
 	opts := clickhouse.QueryOptionsNormalize(_opts...)
+	if len(hosts) > 0 {
+		hosts[0] = "localhost"
+	}
 	c.SetHosts(hosts)
 	if opts.GetSilent() {
 		c.SetLog(log.Silence())
