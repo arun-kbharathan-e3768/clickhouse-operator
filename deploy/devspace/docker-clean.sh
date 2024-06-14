@@ -8,6 +8,6 @@ while [[ "0" == $(kubectl get deploy -n "${OPERATOR_NAMESPACE}" | grep -c -E "cl
 done
 echo "...Done"
 
-for img in $(docker images "${DOCKER_IMAGE%:*}" -q -f "before=${DOCKER_IMAGE}"); do
-    docker image rm -f "${img}" || true
+for img in $(podman  images "${DOCKER_IMAGE%:*}" -q -f "before=${DOCKER_IMAGE}"); do
+    podman image rm -f "${img}" || true
 done

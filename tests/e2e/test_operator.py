@@ -17,15 +17,15 @@ from testflows.core import *
 from e2e.steps import *
 from datetime import datetime
 import debugpy
-debugpy.listen(5678)
-print("Waiting for debugger attach")
-debugpy.wait_for_client()
+# debugpy.listen(5678)
+# print("Waiting for debugger attach")
+# debugpy.wait_for_client()
 
 @TestScenario
 @Name("test_001. 1 node")
 @Requirements(RQ_SRS_026_ClickHouseOperator_Create("1.0"))
 def test_001(self):
-    debugpy.breakpoint()
+    # debugpy.breakpoint()
     create_shell_namespace_clickhouse_template()
 
     kubectl.create_and_check(

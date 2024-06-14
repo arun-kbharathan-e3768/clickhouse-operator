@@ -5,11 +5,35 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Python Debugger: Current File",
-            "type": "debugpy",
+            "name": "Launch Operator Main with Kubernetes",
+            "type": "go",
             "request": "launch",
-            "program": "${file}",
-            "console": "integratedTerminal"
+            "mode": "debug",
+            "program": "${workspaceFolder}/cmd/operator/main.go",
+            "args": [
+                "--debug",
+                "--config",
+                "/Users/arbharathan/go/src/github/clickhouse-operator/config/config-dev.yaml"
+            ],
+            "env": {
+                "KUBECONFIG": "/Users/arbharathan/.kube/config"
+            },
+            "preLaunchTask": "bridge-to-kubernetes.resource"
+        },
+        {
+            "name": "Launch Operator Main",
+            "type": "go",
+            "request": "launch",
+            "mode": "debug",
+            "program": "${workspaceFolder}/cmd/operator/main.go",
+            "args": [
+                "--debug",
+                "--config",
+                "/Users/arbharathan/go/src/github/clickhouse-operator/config/config-dev.yaml"
+            ],
+            "env": {
+                "KUBECONFIG": "/Users/arbharathan/.kube/config"
+            }
         },
         {
             "name": "Python Debugger: Remote Attach",
@@ -24,30 +48,6 @@
                     "localRoot": "${workspaceFolder}",
                     "remoteRoot": "."
                 }
-            ]
-        },
-        {
-            "name": "Python Debugger: Attach using Process Id",
-            "type": "debugpy",
-            "request": "attach",
-            "processId": "${command:pickProcess}"
-        },
-        {
-            "name": "Integration Tests",
-            "type": "debugpy",
-            "request": "launch",
-            "program": "${workspaceFolder}/tests/regression.py",
-            "console": "integratedTerminal",
-            "justMyCode": false,
-            "env": {
-                "COMPOSE_HTTP_TIMEOUT": "1800",
-            },
-            "args": [
-                "--native",
-                "--parallel",
-                "off",
-                "--only",
-                "/regression/e2e.test_operator/test_001*",
             ]
         }
     ]

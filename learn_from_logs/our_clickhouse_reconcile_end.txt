@@ -1,0 +1,94 @@
+I0612 05:24:14.556125       1 controller.go:572] ENQUEUE new ReconcileCHI cmd=update for perftesta2/clickhouse
+I0612 05:24:14.556219       1 worker.go:431] worker.go:431:updateCHI():start:perftesta2/clickhouse
+I0612 05:24:14.556246       1 worker.go:439] updateCHI():perftesta2/clickhouse:finalizer in place, proceed to reconcile cycle. CHI: perftesta2/clickhouse
+I0612 05:24:14.573385       1 worker-deleter.go:619] deleteCHI():perftesta2/clickhouse:CRD: /clickhouseinstallations.clickhouse.altinity.com is not being deleted, operator will delete child resources
+I0612 05:24:14.579582       1 chi.go:38] prepareListOfTemplates():perftesta2/clickhouse:Found applicable templates num: 0
+I0612 05:24:14.579609       1 chi.go:82] ApplyCHITemplates():perftesta2/clickhouse:Applied templates num: 0
+I0612 05:24:14.580745       1 worker-deleter.go:284] deleteCHIProtocol():perftesta2/clickhouse/1a1a30ae-b8f2-4938-ad37-e6ac8ea836a6:Delete CHI started
+I0612 05:24:14.692760       1 deleter.go:306] deleteServiceCHI():perftesta2/clickhouse/1a1a30ae-b8f2-4938-ad37-e6ac8ea836a6:perftesta2/r53-headless-chendpoint-clickhouse
+I0612 05:24:14.693279       1 controller.go:632] OK delete watch (perftesta2/clickhouse)
+I0612 05:24:14.832861       1 deleter.go:329] deleteServiceIfExists():perftesta2/r53-headless-chendpoint-clickhouse:OK delete Service: perftesta2/r53-headless-chendpoint-clickhouse
+I0612 05:24:14.832914       1 cluster.go:84] Run query on: chi-clickhouse-perftesta2-0-0.perftesta2.svc.cluster.local of [chi-clickhouse-perftesta2-0-0.perftesta2.svc.cluster.local]
+I0612 05:24:14.839715       1 schemer.go:46] HostSyncTables():Sync tables: [] as []
+I0612 05:24:14.839789       1 cluster.go:84] Run query on: chi-clickhouse-perftesta2-0-1.perftesta2.svc.cluster.local of [chi-clickhouse-perftesta2-0-1.perftesta2.svc.cluster.local]
+I0612 05:24:14.847354       1 schemer.go:46] HostSyncTables():Sync tables: [] as []
+I0612 05:24:14.847439       1 worker-deleter.go:565] deleteCluster():Delete cluster: perftesta2/perftesta2 - started
+I0612 05:24:14.966594       1 deleter.go:293] deleteServiceCluster():perftesta2/cluster-clickhouse-perftesta2
+I0612 05:24:14.974621       1 deleter.go:322] deleteServiceIfExists():perftesta2/cluster-clickhouse-perftesta2:Not Found Service: perftesta2/cluster-clickhouse-perftesta2 err: services "cluster-clickhouse-perftesta2" not found
+I0612 05:24:14.974649       1 deleter.go:346] deleteSecretCluster():perftesta2/clickhouse-perftesta2-auto-secret
+I0612 05:24:15.239003       1 deleter.go:368] perftesta2/clickhouse-perftesta2-auto-secret:OK delete Secret/perftesta2%!(EXTRA string=clickhouse-perftesta2-auto-secret)
+I0612 05:24:15.239057       1 worker-deleter.go:531] deleteShard():Delete shard: perftesta2/0 - started
+I0612 05:24:15.836209       1 deleter.go:280] deleteServiceShard():perftesta2/shard-clickhouse-perftesta2-0
+I0612 05:24:15.986264       1 deleter.go:322] deleteServiceIfExists():perftesta2/shard-clickhouse-perftesta2-0:Not Found Service: perftesta2/shard-clickhouse-perftesta2-0 err: services "shard-clickhouse-perftesta2-0" not found
+I0612 05:24:15.986316       1 worker-deleter.go:469] deleteHost():Delete host: perftesta2/0-0 - started
+I0612 05:24:16.626840       1 cluster.go:84] Run query on: chi-clickhouse-perftesta2-0-0.perftesta2.svc.cluster.local of [chi-clickhouse-perftesta2-0-0.perftesta2.svc.cluster.local]
+I0612 05:24:16.631524       1 schemer.go:123] HostDropTables():Drop tables: [] as []
+I0612 05:24:16.631623       1 worker-deleter.go:442] deleteTables():Deleted tables on host: 0-0 replica: 0 to shard: 0 in cluster: perftesta2
+I0612 05:24:17.220914       1 deleter.go:34] deleter.go:34:deleteHost():start:perftesta2/0-0
+I0612 05:24:17.220963       1 deleter.go:127] deleteStatefulSet():perftesta2/chi-clickhouse-perftesta2-0-0
+W0612 05:24:17.653193       1 warnings.go:70] [psp-allow-privilege-escalation-container] Privilege escalation container is not allowed: clickhouse
+W0612 05:24:17.653211       1 warnings.go:70] [psp-allow-privilege-escalation-container] Privilege escalation container is not allowed: clickhouse-backup
+W0612 05:24:17.653215       1 warnings.go:70] [psp-readonlyrootfilesystem] only read-only root filesystem container is allowed: clickhouse
+W0612 05:24:17.653218       1 warnings.go:70] [psp-readonlyrootfilesystem] only read-only root filesystem container is allowed: clickhouse-backup
+I0612 05:24:22.807149       1 poller.go:138] Poll():perftesta2/chi-clickhouse-perftesta2-0-0:OK perftesta2/chi-clickhouse-perftesta2-0-0
+I0612 05:24:25.148377       1 chi.go:38] prepareListOfTemplates():backupcopytest/clickhouse:Found applicable templates num: 0
+I0612 05:24:25.148413       1 chi.go:82] ApplyCHITemplates():backupcopytest/clickhouse:Applied templates num: 0
+I0612 05:24:25.179708       1 chi.go:38] prepareListOfTemplates():backupcopytest/clickhouse:Found applicable templates num: 0
+I0612 05:24:25.179734       1 chi.go:82] ApplyCHITemplates():backupcopytest/clickhouse:Applied templates num: 0
+I0612 05:24:25.181051       1 worker.go:387] backupcopytest/clickhouse/122d244c-0e21-48b8-948d-75a18e5a2a2e:updating endpoints for CHI-1 clickhouse
+I0612 05:24:25.191583       1 worker.go:389] backupcopytest/clickhouse/122d244c-0e21-48b8-948d-75a18e5a2a2e:IPs of the CHI-1 update endpoints backupcopytest/clickhouse: len: 2 [10.212.140.6 10.212.133.175]
+I0612 05:24:25.200594       1 chi.go:38] prepareListOfTemplates():backupcopytest/clickhouse:Found applicable templates num: 0
+I0612 05:24:25.200621       1 chi.go:82] ApplyCHITemplates():backupcopytest/clickhouse:Applied templates num: 0
+I0612 05:24:25.201863       1 worker.go:393] backupcopytest/clickhouse/dff0a06a-a71f-4208-ad03-325602338aa7:Update users IPS-1
+I0612 05:24:25.218949       1 worker.go:1315] updateConfigMap():backupcopytest/clickhouse/dff0a06a-a71f-4208-ad03-325602338aa7:Update ConfigMap backupcopytest/chi-clickhouse-common-usersd
+I0612 05:24:25.329813       1 worker.go:275] processReconcilePod():perftesta2/chi-clickhouse-perftesta2-0-0-0:Delete Pod. perftesta2/chi-clickhouse-perftesta2-0-0-0
+I0612 05:24:27.827516       1 poller.go:138] Poll():perftesta2/chi-clickhouse-perftesta2-0-0:OK perftesta2/chi-clickhouse-perftesta2-0-0
+I0612 05:24:27.836674       1 deleter.go:155] OK delete StatefulSet perftesta2/chi-clickhouse-perftesta2-0-0
+I0612 05:24:32.749736       1 chi.go:38] prepareListOfTemplates():backupcopytest/clickhouse:Found applicable templates num: 0
+I0612 05:24:32.749764       1 chi.go:82] ApplyCHITemplates():backupcopytest/clickhouse:Applied templates num: 0
+I0612 05:24:32.775650       1 chi.go:38] prepareListOfTemplates():backupcopytest/clickhouse:Found applicable templates num: 0
+I0612 05:24:32.775672       1 chi.go:82] ApplyCHITemplates():backupcopytest/clickhouse:Applied templates num: 0
+I0612 05:24:32.776929       1 worker.go:387] backupcopytest/clickhouse/c775c278-54a8-429f-93f7-d1f051e7e016:updating endpoints for CHI-1 clickhouse
+I0612 05:24:32.786456       1 worker.go:389] backupcopytest/clickhouse/c775c278-54a8-429f-93f7-d1f051e7e016:IPs of the CHI-1 update endpoints backupcopytest/clickhouse: len: 2 [10.212.140.6 10.212.133.175]
+I0612 05:24:32.797125       1 chi.go:38] prepareListOfTemplates():backupcopytest/clickhouse:Found applicable templates num: 0
+I0612 05:24:32.797148       1 chi.go:82] ApplyCHITemplates():backupcopytest/clickhouse:Applied templates num: 0
+I0612 05:24:32.798351       1 worker.go:393] backupcopytest/clickhouse/266d429a-899f-4d46-9536-8f95977e229c:Update users IPS-1
+I0612 05:24:32.813172       1 worker.go:1315] updateConfigMap():backupcopytest/clickhouse/266d429a-899f-4d46-9536-8f95977e229c:Update ConfigMap backupcopytest/chi-clickhouse-common-usersd
+I0612 05:24:42.847886       1 poller.go:108] cache synced
+I0612 05:24:42.852677       1 deleter.go:204] PVC perftesta2/clickhouse-data-chi-clickhouse-perftesta2-0-0-0 would be deleted
+I0612 05:24:42.859971       1 deleter.go:213] OK delete PVC perftesta2/clickhouse-data-chi-clickhouse-perftesta2-0-0-0
+I0612 05:24:42.860013       1 deleter.go:233] deleteConfigMap():perftesta2/chi-clickhouse-deploy-confd-perftesta2-0-0
+I0612 05:24:42.871043       1 deleter.go:236] OK delete ConfigMap perftesta2/chi-clickhouse-deploy-confd-perftesta2-0-0
+I0612 05:24:42.871090       1 deleter.go:267] deleteServiceHost():perftesta2/chi-clickhouse-perftesta2-0-0
+I0612 05:24:42.884949       1 deleter.go:329] deleteServiceIfExists():perftesta2/chi-clickhouse-perftesta2-0-0:OK delete Service: perftesta2/chi-clickhouse-perftesta2-0-0
+I0612 05:24:42.884979       1 deleter.go:42] deleter.go:42:deleteHost():end:perftesta2/0-0
+I0612 05:24:42.929463       1 worker-deleter.go:505] deleteHost():Delete host: perftesta2/0-0 - completed
+I0612 05:24:42.989552       1 worker-deleter.go:469] deleteHost():Delete host: perftesta2/0-1 - started
+I0612 05:24:43.493159       1 cluster.go:84] Run query on: chi-clickhouse-perftesta2-0-1.perftesta2.svc.cluster.local of [chi-clickhouse-perftesta2-0-1.perftesta2.svc.cluster.local]
+I0612 05:24:43.502501       1 schemer.go:123] HostDropTables():Drop tables: [] as []
+I0612 05:24:43.502573       1 worker-deleter.go:442] deleteTables():Deleted tables on host: 0-1 replica: 1 to shard: 0 in cluster: perftesta2
+I0612 05:24:44.090785       1 deleter.go:34] deleter.go:34:deleteHost():start:perftesta2/0-1
+I0612 05:24:44.090837       1 deleter.go:127] deleteStatefulSet():perftesta2/chi-clickhouse-perftesta2-0-1
+W0612 05:24:44.529807       1 warnings.go:70] [psp-allow-privilege-escalation-container] Privilege escalation container is not allowed: clickhouse
+W0612 05:24:44.529823       1 warnings.go:70] [psp-allow-privilege-escalation-container] Privilege escalation container is not allowed: clickhouse-backup
+W0612 05:24:44.529827       1 warnings.go:70] [psp-readonlyrootfilesystem] only read-only root filesystem container is allowed: clickhouse
+W0612 05:24:44.529829       1 warnings.go:70] [psp-readonlyrootfilesystem] only read-only root filesystem container is allowed: clickhouse-backup
+I0612 05:24:50.039749       1 poller.go:138] Poll():perftesta2/chi-clickhouse-perftesta2-0-1:OK perftesta2/chi-clickhouse-perftesta2-0-1
+I0612 05:24:50.653234       1 worker.go:275] processReconcilePod():perftesta2/chi-clickhouse-perftesta2-0-1-0:Delete Pod. perftesta2/chi-clickhouse-perftesta2-0-1-0
+I0612 05:24:55.060956       1 poller.go:138] Poll():perftesta2/chi-clickhouse-perftesta2-0-1:OK perftesta2/chi-clickhouse-perftesta2-0-1
+I0612 05:24:55.070949       1 deleter.go:155] OK delete StatefulSet perftesta2/chi-clickhouse-perftesta2-0-1
+I0612 05:25:10.083284       1 poller.go:108] cache synced
+I0612 05:25:10.086804       1 deleter.go:204] PVC perftesta2/clickhouse-data-chi-clickhouse-perftesta2-0-1-0 would be deleted
+I0612 05:25:10.096197       1 deleter.go:213] OK delete PVC perftesta2/clickhouse-data-chi-clickhouse-perftesta2-0-1-0
+I0612 05:25:10.096239       1 deleter.go:233] deleteConfigMap():perftesta2/chi-clickhouse-deploy-confd-perftesta2-0-1
+I0612 05:25:10.106711       1 deleter.go:236] OK delete ConfigMap perftesta2/chi-clickhouse-deploy-confd-perftesta2-0-1
+I0612 05:25:10.106753       1 deleter.go:267] deleteServiceHost():perftesta2/chi-clickhouse-perftesta2-0-1
+I0612 05:25:10.123488       1 deleter.go:329] deleteServiceIfExists():perftesta2/chi-clickhouse-perftesta2-0-1:OK delete Service: perftesta2/chi-clickhouse-perftesta2-0-1
+I0612 05:25:10.123517       1 deleter.go:42] deleter.go:42:deleteHost():end:perftesta2/0-1
+I0612 05:25:10.166293       1 worker-deleter.go:505] deleteHost():Delete host: perftesta2/0-1 - completed
+I0612 05:25:10.225241       1 worker-deleter.go:545] deleteShard():Delete shard: perftesta2/0 - completed
+I0612 05:25:10.722211       1 worker-deleter.go:585] deleteCluster():Delete cluster: perftesta2/perftesta2 - completed
+I0612 05:25:11.492815       1 deleter.go:69] perftesta2/clickhouse/1a1a30ae-b8f2-4938-ad37-e6ac8ea836a6:OK delete ConfigMap perftesta2/chi-clickhouse-common-configd
+I0612 05:25:11.693646       1 deleter.go:79] perftesta2/clickhouse/1a1a30ae-b8f2-4938-ad37-e6ac8ea836a6:OK delete ConfigMap perftesta2/chi-clickhouse-common-usersd
+I0612 05:25:11.693692       1 worker-deleter.go:327] deleteCHIProtocol():perftesta2/clickhouse/1a1a30ae-b8f2-4938-ad37-e6ac8ea836a6:Delete CHI completed
+I0612 05:25:12.397703       1 worker.go:449] worker.go:432:updateCHI():end:perftesta2/clickhouse

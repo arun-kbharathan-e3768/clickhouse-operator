@@ -1,0 +1,18 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "bridge-to-kubernetes.resource",
+			"type": "bridge-to-kubernetes.resource",
+			"resource": "chi-test-001-single-0-0",
+			"resourceType": "service",
+			"ports": [
+				8123
+			],
+			"targetCluster": "kind-local",
+			"targetNamespace": "test",
+			"useKubernetesServiceEnvironmentVariables": false,
+			"targetContainer": "clickhouse"
+		}
+	]
+}
