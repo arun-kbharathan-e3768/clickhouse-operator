@@ -48,3 +48,6 @@ tests/image/cache
 # Ignore DevSpace cache and log folder
 /.devspace
 .venv/
+
+# Ignore DevSpace cache and log folder
+.devspace/
